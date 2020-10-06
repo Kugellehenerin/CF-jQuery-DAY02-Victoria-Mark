@@ -35,7 +35,10 @@
     <script>
         $(document).ready(function() {
             $('.santa').click(function() {
-                $(this).hide();
+                // This equals display: none
+                // $(this).hide();
+                // This hides the Santas without moving the images
+                $(this).css("visibility","hidden");
             })
         });
     </script>
