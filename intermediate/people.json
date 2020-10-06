@@ -1,0 +1,44 @@
+var  people = `[{
+    "name": "Marie",
+    "image": "img/person_1",
+    "relation": "sister",
+    "close_family":true,
+    "hobby": "horseback riding"
+},{
+    "name": "Tom",
+    "image": "img/person_2",
+    "relation": "brother",
+    "close_family":true,
+    "hobby": "playing with LEGO"
+},{
+    "name": "Teacher",
+    "image": "img/person_3",
+    "relation": "father",
+    "close_family":true,
+    "hobby": "looking grumpy"
+},{
+    "name": "Stockfoto mom",
+    "image": "img/person_4",
+    "relation": "mother",
+    "close_family":true,
+    "hobby": "loving her kids"
+},{
+    "name": "Stockfoto friend",
+    "image": "img/person_5",
+    "relation": "friend",
+    "close_family":false,
+    "hobby": "looking good on instagram"
+},{
+    "name": "Who is she!?",
+    "image": "img/person_6",
+    "relation": "grandmother",
+    "close_family":false,
+    "hobby": "cooking"
+},{
+    "name": "Edison",
+    "image": "img/person_7",
+    "relation": "weird uncle",
+    "close_family":false,
+    "hobby": "inventing the light bulb"
+}
+]`
