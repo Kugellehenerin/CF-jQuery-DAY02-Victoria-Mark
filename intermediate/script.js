@@ -18,7 +18,7 @@ for (let index = 0; index < peopleArray.length; index++) {
     <img name="photo" src=${peopleArray[index].image}.jpg></img><br>
     <label>${peopleArray[index].name}</label><br>
     <label>${peopleArray[index].relation}</label></br>
-    <p class="result" id="hobby${index}"></p>
+    <p class="result" id="hobby${index}">My favorite hobby is ${peopleArray[index].hobby}</p>
     </div>`)
 }
 
@@ -42,6 +42,7 @@ for (let index = 0; index < peopleArray.length; index++) {
 }
 */
 
+//Some styling
 $("img").css({
     "width": "20em",
     "height" : "20em",
@@ -53,14 +54,24 @@ $("div").css({
     "padding": "1em"
 });
 
+$(".result").css({
+    "display": "none",
+    "font-weight" : "bold"
+});
 
-$('img').click(showHobby);
+//jQuery solution to show additional information
+$(`img`).click(showHobby);
 function showHobby() {
-  //$(this).append(`<br><p>My favorite hobby is TBD</p>`);
-    $(".result").text("My favorite hobby is TBD");
+    $(this).siblings('.result').css("display","block");
 };
 
-/*Javascript Lösung
+$(`img`).dblclick(hideHobby);
+function hideHobby() {
+    $(this).siblings('.result').css("display","none");
+};
+
+//Javascript solution to show additional information
+/*
 var images = document.getElementsByName("photo");
 
 for (let i = 0; i < images.length; i++) {
@@ -73,9 +84,12 @@ function showHobby(x){
 }
 */
 
+//Make weird uncle disappear
+$('div:last').append(`<button type="submit" id="kick_me_out">Kick me out</button>`)
+
+$('#kick_me_out').click(kickOut)
+function kickOut() {
+    $(this).parent('div').hide()
+};
+
 });
-
-
-
-
-
