@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8">
+    <title>Basic</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <style>
+        .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Click on the images:</h1>
+    <div class="result"></div>
+
+    <br>
+
+    <div class="column">
+        <img src="img/1-2-christmas-bell-png-image.png" width="250px" height="auto" id="bell">
+        <img src=" img/santa-claus.png " width="250px" height="auto" id="santa">
+        <img src="img/White_Gift_Box_with_Red_Bow_PNG_Image_2048x.png" width="250px" height="auto" id="present">
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#bell').click(function() {
+                $('.result').text("You clicked on the christmas bell.");
+            });
+            $('#santa').click(function() {
+                $('.result').text("You clicked on the santa claus.");
+            });
+            $('#present').click(function() {
+                $('.result').text("You clicked on the present.");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

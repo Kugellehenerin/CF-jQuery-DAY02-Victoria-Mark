@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8">
+    <title>Basic</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+</head>
+
+<body>
+
+    <h1>Click on the images:</h1>
+
+    <br>
+
+    <div class="column">
+        <div class="container-1">
+            <img src="img/White_Gift_Box_with_Red_Bow_PNG_Image_2048x.png" width="250px" height="auto">
+            <img src="img/santa-claus.png" width="250px" height="auto" class="santa" id="santa-1">
+            <img src="img/White_Gift_Box_with_Red_Bow_PNG_Image_2048x.png" width="250px" height="auto">
+        </div>
+        <div class="container-2">
+            <img src="img/White_Gift_Box_with_Red_Bow_PNG_Image_2048x.png" width="250px" height="auto">
+            <img src="img/santa-claus.png" width="250px" height="auto" class="santa" id="santa-2">
+            <img src="img/White_Gift_Box_with_Red_Bow_PNG_Image_2048x.png" width="250px" height="auto">
+        </div>
+        <div class="container-3">
+            <img src="img/santa-claus.png" width="250px" height="auto" class="santa" id="santa-3">
+            <img src="img/White_Gift_Box_with_Red_Bow_PNG_Image_2048x.png" width="250px" height="auto">
+            <img src="img/santa-claus.png" width="250px" height="auto" class="santa" id="santa-4">
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function() {
+            $('.santa').click(function() {
+                $(this).hide();
+            })
+        });
+    </script>
+
+</body>
+
+</html>
