@@ -15,7 +15,7 @@ $("main").css({
 //Filling main with divs containing images and labels
 for (let index = 0; index < peopleArray.length; index++) {
     $("main").append(`<div id="div${index}">
-    <img name="photo" src=${peopleArray[index].image}.jpg></img><br>
+    <img name="photo" id="photo_${index}" src=${peopleArray[index].image}.jpg></img><br>
     <label>${peopleArray[index].name}</label><br>
     <label>${peopleArray[index].relation}</label></br>
     <p class="result" id="hobby${index}">My favorite hobby is ${peopleArray[index].hobby}</p>
@@ -59,7 +59,7 @@ $(".result").css({
     "font-weight" : "bold"
 });
 
-//jQuery solution to show additional information
+//Solution #1: jQuery to show (and hide) additional information
 $(`img`).click(showHobby);
 function showHobby() {
     $(this).siblings('.result').css("display","block");
@@ -70,7 +70,18 @@ function hideHobby() {
     $(this).siblings('.result').css("display","none");
 };
 
-//Javascript solution to show additional information
+//Solution #2: jQuery to import additional information from JSON (.result needs to be visible to work)
+/*
+var images = $("img")
+for (let i = 0; i < images.length; i++) {
+
+    $(`#photo_${i}`).on("click", function () {
+        $(this).siblings('.result').text(`My favorite hobby is ${peopleArray[i].hobby}`);
+    });
+}
+*/
+
+//olution #3: Javascript to import additional information from JSON (.result needs to be visible to work)
 /*
 var images = document.getElementsByName("photo");
 
